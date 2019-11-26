@@ -45,16 +45,23 @@
 
                                 <table class="table table-borderless table-responsive">
 
-                                    <tr><td>{{$movie->title}}</td></tr>
+                                    <tr><td><b>{{$movie->title}}</b></td></tr>
                                     <tr><td>{{$movie->year}}</td></tr>
                                     <tr><td>{{$movie->rating}}</td></tr>
-
-                                    <td style = "margin: 0 auto;">
-                                        <form action="{{route('movie.show',$movie->id)}}" method="GET">
-                                        @csrf
-                                        @method("PATCH")
-                                        <input type="submit" margin=" 0 auto" value="Modificar">
-                                        </form>
+                                        <td style = "margin: 0 auto;"> 
+                                            <form action="{{route('movie.show',$movie->id)}}" method="GET">
+                                            @csrf
+                                            @method("GET|HEAD")
+                                            <input type="submit" class="btn btn-primary" margin=" 0 auto" value="Modificar">
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <form action= "{{route('movie.destroy',$movie->id)}}" method= "POST">
+                                                @csrf
+                                                @method("DELETE")
+                                                <input type="submit" class="btn btn-danger"  value="Borrar">
+                                            </form>
+                                        </td>
 
                                 </td>
 
