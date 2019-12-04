@@ -17,7 +17,7 @@ class CreatePeopleTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('photo');
-            $table->string('external_url');
+            $table->string('externalurl');
             $table->timestamps();
         });
     }

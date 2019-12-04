@@ -24,7 +24,7 @@ class camposGenre extends FormRequest
     public function rules()
     {
         return [
-            'description'=>'required|string|max:100',
+            'description'=>'required|max:50',
         ];
     }
 }

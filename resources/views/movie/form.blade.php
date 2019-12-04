@@ -2,11 +2,11 @@
 
     @section ('cabecera')
 
-        <h2 align = 'center'> FORMULARIO DE INSERCIÓN </h2>
+
 
     @endsection
 
-    @section("contenido")
+    @section("contenido2")
 
 
         @isset($movie)
@@ -14,12 +14,23 @@
         <form enctype='multipart/form-data' action="{{route('movie.update',['id'=>$movie->id]) }}" method="POST">
 
             @method("PUT")
+            <fieldset>
+                    <legend>
+                            <div class="textoGenero font-italic Italica" style="padding:15px 25px 25px 25px">
+                                <p class="h4 text-secondary">Actualizar Películas </p>
+                                </div>
+                    </legend>
         @else
             <form enctype='multipart/form-data' action="{{route('movie.store')}}" method="POST">
+                <fieldset>
+                        <legend>
+                                <div class="textoGenero font-italic Italica" style="padding:15px 25px 25px 25px">
+                                    <p class="h4 text-secondary"> Insertar Películas </p>
+                                    </div>
+                        </legend>
         @endisset
             @csrf
-                <fieldset>
-                    <legend><b> Películas </b></legend>
+
                 <label for="title" >Título</label>
                     <input type="text" name="title" id="title" value= "{{$movie->title??''}}">
                 <label for="year">Año</label>
@@ -57,7 +68,7 @@
                 <label for = 'filename'>Filename</label>
                     <input type="text" name="filename" id = 'filename' value= '{{$movie->filename??''}}'>
                 <label for = 'filepath'>Filepath</label>
-                    <input type="text" name="filepath" id = 'filepath' value= '{{$movie->filepath??''}}'>
+                <input type="file" name="filepath" id = 'filepath' value= '{{$movie->filepath??''}}'>
                 <label for = 'externalurl'>Externalurl</label>
                     <input type="text"  name="externalurl" id = 'externalurl' value= '{{$movie->externalurl??''}}'><br>
 
@@ -82,18 +93,8 @@
 
     @endsection
 
-    @section('pie')
+    @section('pie2')
 
 
     @endsection
- {{--}}
-                            intentamos que los campos de género que corresponden a esa película
-                            aparezcan marcados, pero no resulta. $movie->genres no es un array, sino
-                            una colección. MIRARLO!!!!!!!!!!
 
-                            @if (in_array($genre, $movie->genres->toArray()))
-                            <option  value="{{$genre->id}}" selected >{{$genre->description}}</option>
-                        @else
-
-                        @endif
-                             {{--}}

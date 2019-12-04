@@ -8,6 +8,12 @@ use App\User;
 
 class UserController extends Controller
 {
+
+    public function __construct(){
+
+        $this->middleware("auth")->only("create", "edit","destroy");
+    }
+
    public function index()
     {
 
@@ -33,13 +39,10 @@ class UserController extends Controller
 
             $user = new User();
 
-            //$user = $r->all();
             $user->name=$r->name;
-            //$user->apellidos=$r->apellidos;
             $user->email=$r->email;
-           // $user->nick=$r->nick;
             $user->password=$r->password;
-            //$user->tipo=$r->tipo;
+
 
             $user->save();
 
@@ -56,11 +59,8 @@ class UserController extends Controller
     {
         $user = User::find($r->id);
         $user->name=$r->name;
-        //$user->apellidos=$r->apellidos;
         $user->email=$r->email;
-       // $user->nick=$r->nick;
         $user->password=$r->password;
-        //$user->tipo=$r->tipo;
 
             $user->save();
             return redirect()->route('user.index');

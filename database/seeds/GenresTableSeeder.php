@@ -30,13 +30,8 @@ class GenresTableSeeder extends Seeder
             'description'=>'thriller',
         ]);
         DB::table('genres')->insert([
-            'description'=>'misterio',
-        ]);
-        DB::table('genres')->insert([
             'description'=>'romantica',
         ]);
-        DB::table('genres')->insert([
-            'description'=>'musical',
-        ]);
+
     }
 }

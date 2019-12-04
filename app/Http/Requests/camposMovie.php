@@ -24,10 +24,10 @@ class camposMovie extends FormRequest
     public function rules()
     {
         return [
-           'title'=>'required|max:255',
-           'year'=>'required|numeric|max:4',
-           'duration'=>'required|numeric|max:3',
-           'rating'=>'required|numeric|max:1',
+           'title'=>'required',
+           'year'=>'required',
+           'duration'=>'required',
+           'rating'=>'required',
            'cover'=>'required',
 
 

@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\camposPeople;
 use App\People;
+use App\Movie;
 
 class PeopleController extends Controller
 {
+    public function __construct(){
+
+        $this->middleware("auth")->only("create", "edit","destroy");
+    }
 
     public function index()
     {
@@ -20,7 +26,7 @@ class PeopleController extends Controller
     }
 
 
-    public function store(Request $r)
+    public function store(camposPeople $r)
     {
        $people = new People($r->all());
 
@@ -43,20 +49,24 @@ class PeopleController extends Controller
 
     public function show($id)
     {
-        //
-    }
+        $people = People::find($id);
+        dd($people);
+        $movieList = Movie::all();
 
+        return view('/people/galeriaActores', array('people'=>$people, 'movieList'=>$movieList));
+    }
 
     public function edit($id)
     {
         $people = People::find($id);
+        //dd($people);
         return view('people/form', array('people'=>$people));
 
 
     }
 
 
-    public function update(Request $r)
+    public function update(camposPeople $r)
     {
        $people = People::find($r->id);
        $people->fill($r->all());

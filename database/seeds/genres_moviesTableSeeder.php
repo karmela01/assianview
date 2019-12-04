@@ -17,47 +17,106 @@ class genres_moviesTableSeeder extends Seeder
         ]);
         DB::table('genres_movies')->insert([
             'movie_id'=>'1',
-            'genre_id'=>'7',
-        ]);
-        DB::table('genres_movies')->insert([
-            'movie_id'=>'2',
-            'genre_id'=>'1',
-        ]);
-        DB::table('genres_movies')->insert([
-            'movie_id'=>'2',
-            'genre_id'=>'3',
-        ]);
-        DB::table('genres_movies')->insert([
-            'movie_id'=>'2',
             'genre_id'=>'4',
         ]);
         DB::table('genres_movies')->insert([
-            'movie_id'=>'3',
-            'genre_id'=>'2',
+            'movie_id'=>'2',
+            'genre_id'=>'6',
         ]);
         DB::table('genres_movies')->insert([
-            'movie_id'=>'3',
-            'genre_id'=>'7',
-        ]);
-        DB::table('genres_movies')->insert([
-            'movie_id'=>'4',
+            'movie_id'=>'2',
             'genre_id'=>'1',
         ]);
         DB::table('genres_movies')->insert([
-            'movie_id'=>'4',
+            'movie_id'=>'3',
             'genre_id'=>'3',
         ]);
         DB::table('genres_movies')->insert([
-            'movie_id'=>'4',
+            'movie_id'=>'3',
             'genre_id'=>'5',
         ]);
         DB::table('genres_movies')->insert([
-            'movie_id'=>'5',
+            'movie_id'=>'4',
+            'genre_id'=>'7',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'4',
             'genre_id'=>'1',
         ]);
         DB::table('genres_movies')->insert([
             'movie_id'=>'5',
+            'genre_id'=>'2',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'5',
+            'genre_id'=>'3',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'6',
             'genre_id'=>'4',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'6',
+            'genre_id'=>'5',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'6',
+            'genre_id'=>'6',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'7',
+            'genre_id'=>'7',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'7',
+            'genre_id'=>'6',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'8',
+            'genre_id'=>'5',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'8',
+            'genre_id'=>'4',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'9',
+            'genre_id'=>'3',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'9',
+            'genre_id'=>'2',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'10',
+            'genre_id'=>'1',
+        ]);DB::table('genres_movies')->insert([
+            'movie_id'=>'10',
+            'genre_id'=>'3',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'11',
+            'genre_id'=>'5',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'11',
+            'genre_id'=>'7',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'12',
+            'genre_id'=>'6',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'12',
+            'genre_id'=>'4',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'13',
+            'genre_id'=>'2',
+        ]);
+        DB::table('genres_movies')->insert([
+            'movie_id'=>'13',
+            'genre_id'=>'1',
         ]);
     }
 }

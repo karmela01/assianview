@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class People extends Model
 {
     protected $fillable = [
-        'name','photo','external_url',
+        'name','photo','externalurl',
     ];
     public function moviesAct(){
 
